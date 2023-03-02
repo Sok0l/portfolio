@@ -5,13 +5,13 @@ import { Home } from "./pages/Home";
 import { Projects } from "./pages/Projects";
 import { Contacts } from "./pages/Contacts";
 import { Project } from "./pages/Project";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./utils/scrollToTop";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
