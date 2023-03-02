@@ -1,41 +1,52 @@
 import React from "react";
-import sun from "../../img/icons/sun.svg";
-import mun from "../../img/icons/moon.svg";
 import "./style.css";
+import { NavLink } from "react-router-dom";
+import { BtnDarkMode } from "../BtnDarkMode/BtnDarkMode";
 
 const Navbar = () => {
+  const activeLink = "nav-list__link nav-list__link--active";
+  const normalLink = "nav-list__link";
   return (
     <div>
       <nav className="nav">
         <div className="container">
           <div className="nav-row">
-            <a href="./index.html" className="logo">
-              <strong>Freelancer</strong> portfolio
-            </a>
+            <NavLink to="/" className="logo">
+              <strong>My</strong> portfolio
+            </NavLink>
 
-            <button className="dark-mode-btn">
-              <img src={sun} alt="Light mode" className="dark-mode-btn__icon" />
-              <img src={mun} alt="Dark mode" className="dark-mode-btn__icon" />
-            </button>
+            <BtnDarkMode />
 
             <ul className="nav-list">
               <li className="nav-list__item">
-                <a
-                  href="./index.html"
-                  className="nav-list__link nav-list__link--active"
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  to="/"
                 >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-list__item">
-                <a href="./projects.html" className="nav-list__link">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  to="/projects"
+                >
                   Projects
-                </a>
+                </NavLink>
               </li>
               <li className="nav-list__item">
-                <a href="./contacts.html" className="nav-list__link">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? activeLink : normalLink
+                  }
+                  to="/contacts"
+                >
                   Contacts
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

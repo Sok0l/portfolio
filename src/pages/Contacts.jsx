@@ -14,13 +14,15 @@ export const Contacts = () => {
           <li className="content-list__item">
             <h2 className="title-2">Telegram / WhatsApp</h2>
             <p>
-              <a href="tel:+79051234567">+7 (905) 123-45-67</a>
+              <a href="tel:+79113863340">+7 (911) 386-33-40 </a>
             </p>
           </li>
           <li className="content-list__item">
             <h2 className="title-2">Email</h2>
             <p>
-              <a href="mailto:webdev@protonmail.com">webdev@protonmail.com</a>
+              <a href="mailto:1levsokolov22@gmail.com">
+                1levsokolov22@gmail.com
+              </a>
             </p>
           </li>
         </ul>
