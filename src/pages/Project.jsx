@@ -21,7 +21,7 @@ export const Project = () => {
           <div className="project-details__desc">
             <p>Skills: {project.skills}</p>
           </div>
-          {project.gitHubLink && <BtnGitHub link="http://github.com" />}
+          {project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
         </div>
       </div>
     </main>
